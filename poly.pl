@@ -20,7 +20,7 @@ sub hashPoly {
 
 	my %hash = @_;
 	my $term = '';
-	for my $i (keys %hash) {
+	for my $i (reverse sort keys %hash) {
 		$term = $term . " + " . $hash{$i} . "x" . $i;
 	}
 	return $term;
